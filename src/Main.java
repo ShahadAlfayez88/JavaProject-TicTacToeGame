@@ -109,33 +109,34 @@ public class Main {
 
     }
 
-    public static boolean ValidMove(char[][] board, int position) {
-        if(position==1){
-            return board[0][0] == ' ' ;
+    public static boolean ValidMove(char[][] table, int position) {
+        int UserChoice = position;
+        if(UserChoice==1){
+            return table[0][0] == ' ' ;
         }
-        else if (position==2) {
-            return board[0][1] == ' '; }
+        else if (UserChoice==2) {
+            return table[0][1] == ' '; }
 
-        else if (position==3) {
-            return board[0][2] == ' ';}
+        else if (UserChoice==3) {
+            return table[0][2] == ' ';}
 
-        else if(position==4) {
-            return board[1][0] == ' '; }
+        else if(UserChoice==4) {
+            return table[1][0] == ' '; }
 
-        else if (position==5) {
-            return board[1][1] == ' '; }
+        else if (UserChoice==5) {
+            return table[1][1] == ' '; }
 
-        else if (position==6){
-            return board[1][2] == ' ' ; }
+        else if (UserChoice==6){
+            return table[1][2] == ' ' ; }
 
-        else if (position==7){
-            return (board[2][0] == ' ');}
+        else if (UserChoice==7){
+            return (table[2][0] == ' ');}
 
-        else if (position==8){
-            return (board[2][1] == ' ');}
+        else if (UserChoice==8){
+            return (table[2][1] == ' ');}
 
-        else if (position==9){
-            return (board[2][2] == ' ');}
+        else if (UserChoice==9){
+            return (table[2][2] == ' ');}
         else
             return false;
     }
