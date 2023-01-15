@@ -140,7 +140,7 @@ public class Main {
             return false;
     }
 
-    public static boolean GameWinnner(char table [][], char player){
+    public static boolean checkwinner(char table [][], char player){
         if (    (table[0][0] == player && table [0][1] == player && table [0][2] == player) ||
                 (table[1][0] == player && table [1][1] == player && table [1][2] == player) ||
                 (table[2][0] == player && table [2][1] == player && table [2][2] == player) ||
@@ -156,12 +156,12 @@ public class Main {
 
     public static boolean FinishGame(char[][] table, char Player1 , char Player2) {
 
-        if (GameWinnner(table, Player1)) {
+        if (checkwinner(table, Player1)) {
             System.out.println("you win :)");
             return true;
         }
 
-        if (GameWinnner(table, Player2)) {
+        if (checkwinner(table, Player2)) {
             System.out.println("Computer wins :(");
             return true;
         }
