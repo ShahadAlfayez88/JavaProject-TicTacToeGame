@@ -140,17 +140,15 @@ public class Main {
             return false;
     }
 
-    public static boolean GameWinnner(char table [][], char playerSymbol){
-        if ((table[0][0] == playerSymbol && table [0][1] == playerSymbol && table [0][2] == playerSymbol) ||
-                (table[1][0] == playerSymbol && table [1][1] == playerSymbol && table [1][2] == playerSymbol) ||
-                (table[2][0] == playerSymbol && table [2][1] == playerSymbol && table [2][2] == playerSymbol) ||
-
-                (table[0][0] == playerSymbol && table [1][0] == playerSymbol && table [2][0] == playerSymbol) ||
-                (table[0][1] == playerSymbol && table [1][1] == playerSymbol && table [2][1] == playerSymbol) ||
-                (table[0][2] == playerSymbol && table [1][2] == playerSymbol && table [2][2] == playerSymbol) ||
-
-                (table[0][0] == playerSymbol && table [1][1] == playerSymbol && table [2][2] == playerSymbol) ||
-                (table[0][2] == playerSymbol && table [1][1] == playerSymbol && table [2][0] == playerSymbol) ) {
+    public static boolean GameWinnner(char table [][], char player){
+        if (    (table[0][0] == player && table [0][1] == player && table [0][2] == player) ||
+                (table[1][0] == player && table [1][1] == player && table [1][2] == player) ||
+                (table[2][0] == player && table [2][1] == player && table [2][2] == player) ||
+                (table[0][0] == player && table [1][0] == player && table [2][0] == player) ||
+                (table[0][1] == player && table [1][1] == player && table [2][1] == player) ||
+                (table[0][2] == player && table [1][2] == player && table [2][2] == player) ||
+                (table[0][0] == player && table [1][1] == player && table [2][2] == player) ||
+                (table[0][2] == player && table [1][1] == player && table [2][0] == player) ) {
             return true;
         }
         return false;
